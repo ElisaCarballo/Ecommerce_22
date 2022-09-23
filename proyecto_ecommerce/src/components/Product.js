@@ -72,10 +72,10 @@ export default function Product({
             variant='h5'
             color='textSecondary'
           >
-            {accounting.formatMoney(price, "$")}
+            {accounting.formatMoney(999, "$")}
           </Typography>
         }
-        title={Shoes}
+        title='Shoes'
         subheader='in Stock'
       />
       <CardMedia className={classes.media} 
@@ -84,14 +84,14 @@ export default function Product({
       
       <CardContent>
         <Typography variant='body2' color='textSecondary' component='p'>
-          '{Running Shoes}''
+          "Running Shoes"
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label='Add to Cart' onClick={addToBasket}>
           <AddShoppingCart fontSize='large' />
         </IconButton>
-        {Array(rating)
+        {Array(4)
           .fill()
           .map((_, i) => (
             <p>&#11088;</p>
@@ -109,7 +109,7 @@ export default function Product({
       </CardActions>
       <Collapse in={expanded} timeout='auto' unmountOnExit>
         <CardContent>
-          <Typography paragraph>{description}</Typography>
+          <Typography paragraph>"tennis especiales para hacer deporte"</Typography>
         </CardContent>
       </Collapse>
     </Card>
